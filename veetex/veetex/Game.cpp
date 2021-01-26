@@ -101,11 +101,23 @@ void Game::processKeys(sf::Event t_event)
 		m_vertexArr.setPrimitiveType(sf::Lines);
 		std::cout << "now drawing Lines" << std::endl;
 	}
+	if (sf::Keyboard::Num2 == t_event.key.code)
+	{
+		m_vertexArr.clear();
+		m_vertexArr.setPrimitiveType(sf::TrianglesStrip);
+		std::cout << "Traingles now" << std::endl;
+	}
 
 
 	if (sf::Keyboard::B == t_event.key.code)
 	{
 		m_colour = sf::Color::Blue;
+		std::cout << "Cloour is Blue" << std::endl;
+	}
+	if (sf::Keyboard::Y == t_event.key.code)
+	{
+		m_colour = sf::Color::Yellow;
+		std::cout << "drawing in yellow" << std::endl;
 	}
 
 }

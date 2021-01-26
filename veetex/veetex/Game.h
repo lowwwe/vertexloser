@@ -40,7 +40,7 @@ private:
 	bool m_exitGame; // control exiting game
 
 	sf::VertexArray m_vertexArr{ sf::Points }; // used to store all the vertexes
-	sf::Color m_colour{ sf::Color::Red };
+	sf::Color m_colour{ sf::Color::Red };  // colour of next vertex
 };
 
 #endif // !GAME_HPP
