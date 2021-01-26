@@ -95,16 +95,33 @@ void Game::processKeys(sf::Event t_event)
 	{
 		m_exitGame = true;
 	}
+	if (sf::Keyboard::Num1 == t_event.key.code)
+	{
+		m_vertexArr.clear();
+		m_vertexArr.setPrimitiveType(sf::Lines);
+		std::cout << "now drawing Lines" << std::endl;
+	}
+
+
+	if (sf::Keyboard::B == t_event.key.code)
+	{
+		m_colour = sf::Color::Blue;
+	}
+
 }
 
+/// <summary>
+/// add a new vertex at the location of the mouse clickl
+// the colour will be red
+/// </summary>
+/// <param name="t_event">mouse up event</param>
 void Game::processMouseUp(sf::Event t_event)
 {
 	sf::Vertex nextVertex;
-	nextVertex.color = sf::Color::Red;
+	nextVertex.color = m_colour;
 	nextVertex.position.x = t_event.mouseButton.x;
 	nextVertex.position.y = t_event.mouseButton.y;
 	m_vertexArr.append(nextVertex);
-
 }
 
 /// <summary>

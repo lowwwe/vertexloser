@@ -39,8 +39,8 @@ private:
 	sf::Sprite m_logoSprite; // sprite used for sfml logo
 	bool m_exitGame; // control exiting game
 
-	sf::VertexArray m_vertexArr;
-
+	sf::VertexArray m_vertexArr{ sf::Points }; // used to store all the vertexes
+	sf::Color m_colour{ sf::Color::Red };
 };
 
 #endif // !GAME_HPP
