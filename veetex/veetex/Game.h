@@ -25,6 +25,7 @@ private:
 
 	void processEvents();
 	void processKeys(sf::Event t_event);
+	void processMouseUp(sf::Event t_event);
 	void update(sf::Time t_deltaTime);
 	void render();
 	
@@ -37,6 +38,8 @@ private:
 	sf::Texture m_logoTexture; // texture used for sfml logo
 	sf::Sprite m_logoSprite; // sprite used for sfml logo
 	bool m_exitGame; // control exiting game
+
+	sf::VertexArray m_vertexArr;
 
 };
 
